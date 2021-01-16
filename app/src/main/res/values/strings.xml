@@ -3,4 +3,13 @@
     <string name="mainName">Test</string>
     <string name="first_task">1) 2+2?</string>
     <string name="second_task">2) Select the correct statements:</string>
+    <string name="third_task">3) Choose the correct one:</string>
+    <string name="group_first_answer">Plane</string>
+    <string name="group_second_answer">Car</string>
+    <string name="group_third_answer">Chair</string>
+    <string name="group_fourth_answer">Bike</string>
+    <string name="fourth_task">4) Write here all the powers of two in ascending order up to 18:</string>
+    <string name="reset">Reset</string>
+    <string name="check">Check me!</string>
+    <string name="text_hint">Enter here your answer!</string>
 </resources>

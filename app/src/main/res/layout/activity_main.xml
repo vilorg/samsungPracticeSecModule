@@ -1,103 +1,281 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:layout_margin="25dp"
-    >
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/mainName"
-        android:layout_margin="15dp"
-        android:textSize="35sp"
-        android:fontFamily="casual"
-        android:textStyle="italic"
-        />
-
-
-    <TextView
-        android:id="@+id/firstTask"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/first_task"
-        android:textSize="20sp"
-        android:layout_marginVertical="10dp"
-        android:background="@drawable/back_tasks"
-        android:gravity="center_horizontal"
-        android:padding="3dp"
-        android:fontFamily="casual"
-        />
-
-    <EditText
-        android:id="@+id/firstAnswer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/back_answers"
-        android:inputType="number"
-        android:autofillHints="Enter here your answer."
-        tools:ignore="LabelFor"
-        android:layout_marginBottom="20dp"
-        android:padding="3dp"
-        android:textSize="20sp"
-        android:fontFamily="casual"
-        android:gravity="center_horizontal"
-        />
-
-    <TextView
-        android:id="@+id/secondTask"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/second_task"
-        android:textSize="20sp"
-        android:layout_marginVertical="10dp"
-        android:gravity="center_horizontal"
-        android:padding="3dp"
-        android:fontFamily="casual"
-        android:background="@drawable/back_tasks"
-        />
-
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
         android:orientation="vertical"
-        android:background="@drawable/back_answers"
+        tools:context=".MainActivity"
+        android:layout_margin="25dp"
         >
-        <CheckBox
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/mainText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/mainName"
+                android:layout_margin="15dp"
+                android:textSize="35sp"
+                android:fontFamily="casual"
+                android:textStyle="italic"
+                android:gravity="center_horizontal"
+                />
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/mainName"
+                android:layout_margin="15dp"
+                android:textSize="35sp"
+                android:fontFamily="casual"
+                android:textStyle="italic"
+                android:textColor="@android:color/transparent"
+                android:gravity="center_horizontal"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/firstTask"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cat"
+            android:text="@string/first_task"
+            android:textSize="20sp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/back_tasks"
+            android:gravity="center_horizontal"
+            android:padding="3dp"
             android:fontFamily="casual"
-            android:textSize="18sp"
             />
-        <CheckBox
+
+        <EditText
+            android:id="@+id/firstAnswer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dog"
+            android:background="@drawable/back_answers"
+            android:inputType="number"
+            android:autofillHints="Enter here your answer."
+            tools:ignore="LabelFor"
+            android:layout_marginBottom="20dp"
+            android:padding="3dp"
+            android:textSize="20sp"
             android:fontFamily="casual"
-            android:textSize="18sp"/>
+            android:gravity="center_horizontal"
+            android:hint="@string/text_hint"
+            />
+
+        <TextView
+            android:id="@+id/secondTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/second_task"
+            android:textSize="20sp"
+            android:layout_marginVertical="10dp"
+            android:gravity="center_horizontal"
+            android:padding="3dp"
+            android:fontFamily="casual"
+            android:background="@drawable/back_tasks"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical"
+            android:background="@drawable/back_answers"
+            >
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cat"
+                android:fontFamily="casual"
+                android:textSize="18sp"
+                android:buttonTint="@android:color/holo_green_dark"
+                />
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dog"
+                android:fontFamily="casual"
+                android:textSize="18sp"
+                android:buttonTint="@android:color/holo_green_dark"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/thirdTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/third_task"
+            android:textSize="20sp"
+            android:layout_marginVertical="10dp"
+            android:gravity="center_horizontal"
+            android:padding="3dp"
+            android:fontFamily="casual"
+            android:background="@drawable/back_tasks"
+            />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RadioButton
+                android:id="@+id/radio_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/group_first_answer"
+                android:fontFamily="casual"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/back_answers"
+                />
+            <RadioButton
+                android:id="@+id/radio_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/group_second_answer"
+                android:fontFamily="casual"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/back_answers"
+                />
+            <RadioButton
+                android:id="@+id/radio_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/group_third_answer"
+                android:fontFamily="casual"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/back_answers"
+                />
+            <RadioButton
+                android:id="@+id/radio_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/group_fourth_answer"
+                android:fontFamily="casual"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/back_answers"
+                />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/fifthTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fourth_task"
+            android:textSize="20sp"
+            android:layout_marginVertical="10dp"
+            android:gravity="center_horizontal"
+            android:padding="3dp"
+            android:fontFamily="casual"
+            android:background="@drawable/back_tasks"
+            />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            >
+            <TableRow>
+                <EditText
+                    android:id="@+id/oneFirst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:background="@drawable/back_answers"
+                    android:layout_marginHorizontal="5dp"
+                    android:fontFamily="casual"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    />
+                <EditText
+                    android:id="@+id/oneSecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:background="@drawable/back_answers"
+                    android:layout_marginHorizontal="5dp"
+                    android:fontFamily="casual"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    />
+                <EditText
+                    android:id="@+id/oneThird"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:background="@drawable/back_answers"
+                    android:layout_marginHorizontal="5dp"
+                    android:fontFamily="casual"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    />
+                <EditText
+                    android:id="@+id/oneFourth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:background="@drawable/back_answers"
+                    android:layout_marginHorizontal="5dp"
+                    android:fontFamily="casual"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    />
+                <EditText
+                    android:id="@+id/oneFifth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:background="@drawable/back_answers"
+                    android:layout_marginHorizontal="5dp"
+                    android:fontFamily="casual"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    />
+                <Button
+                    android:id="@+id/reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reset"
+                    android:fontFamily="casual"
+                    android:textSize="20sp"
+                    />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/check"
+            android:fontFamily="casual"
+            android:textSize="30sp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="40dp"
+            />
+
     </LinearLayout>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/back_answers"
-        android:inputType="number"
-        android:autofillHints="Enter here your answer."
-        tools:ignore="LabelFor"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="casual"
-        android:gravity="center_horizontal"
-        />
-
-
-
-</LinearLayout>
+</ScrollView>
