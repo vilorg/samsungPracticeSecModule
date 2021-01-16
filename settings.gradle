@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "samsung_module_two"
