@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -12,36 +12,18 @@
         tools:context=".MainActivity"
         android:layout_margin="25dp"
         >
-        <RelativeLayout
+        <TextView
+            android:id="@+id/mainText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/mainText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/mainName"
-                android:layout_margin="15dp"
-                android:textSize="35sp"
-                android:fontFamily="casual"
-                android:textStyle="italic"
-                android:gravity="center_horizontal"
-                />
-            <TextView
-                android:id="@+id/total"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/mainName"
-                android:layout_margin="15dp"
-                android:textSize="35sp"
-                android:fontFamily="casual"
-                android:textStyle="italic"
-                android:textColor="@android:color/transparent"
-                android:gravity="center_horizontal"
-                />
-
-        </RelativeLayout>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/mainName"
+            android:layout_margin="15dp"
+            android:textSize="35sp"
+            android:fontFamily="casual"
+            android:textStyle="italic"
+            android:gravity="center_horizontal"
+            />
 
         <TextView
             android:id="@+id/firstTask"
@@ -94,6 +76,7 @@
             android:background="@drawable/back_answers"
             >
             <CheckBox
+                android:id="@+id/check_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Cat"
@@ -102,6 +85,7 @@
                 android:buttonTint="@android:color/holo_green_dark"
                 />
             <CheckBox
+                android:id="@+id/check_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Dog"
@@ -139,6 +123,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="5dp"
                 android:background="@drawable/back_answers"
+                android:buttonTint="@android:color/holo_green_dark"
                 />
             <RadioButton
                 android:id="@+id/radio_2"
@@ -150,6 +135,8 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="5dp"
                 android:background="@drawable/back_answers"
+                android:buttonTint="@android:color/holo_green_dark"
+
                 />
             <RadioButton
                 android:id="@+id/radio_3"
@@ -161,6 +148,8 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="5dp"
                 android:background="@drawable/back_answers"
+                android:buttonTint="@android:color/holo_green_dark"
+
                 />
             <RadioButton
                 android:id="@+id/radio_4"
@@ -172,11 +161,13 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="5dp"
                 android:background="@drawable/back_answers"
+                android:buttonTint="@android:color/holo_green_dark"
+
                 />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/fifthTask"
+            android:id="@+id/fourthTask"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/fourth_task"
@@ -193,7 +184,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             >
-            <TableRow>
+            <TableRow tools:ignore="UselessParent">
                 <EditText
                     android:id="@+id/oneFirst"
                     android:layout_width="wrap_content"
@@ -261,6 +252,7 @@
                     android:text="@string/reset"
                     android:fontFamily="casual"
                     android:textSize="20sp"
+                    android:onClick="reset"
                     />
             </TableRow>
         </TableLayout>
@@ -275,6 +267,7 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:layout_marginBottom="40dp"
+            android:onClick="checkButton"
             />
 
     </LinearLayout>
